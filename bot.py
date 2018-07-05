@@ -41,7 +41,7 @@ async def on_message(message):
 350,
 400,
 450,
-500"", inline=True)
+500""", inline=True)
         emb.set_image(url='https://i.imgur.com/i8lO032.png')
         await client.send_message(message.channel, embed=emb)
 
