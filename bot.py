@@ -1,16 +1,29 @@
 import discord
+import asyncio
+import random
+import os
 import json
 import os.path
-import random
+from discord.ext.commands import Bot
+from discord.ext import commands
 
 client = discord.Client()
-BOT_TOKEN = "BOT_TOKEN"
-
+bot = discord.Client()
+discord.Client.setUsername='Koneko'
+my_bot = Bot(command_prefix="$")
+bothAuth = ''
 
 @client.event
 async def on_ready():
+    print("Logged in as :")
     print(client.user.name)
-    print("===================")
+    print("ID:")
+    print(client.user.id)
+    print("Ready to use")
+    discord.Client.setUsername='Koneko'
+async def wait_until_login():
+    discord.Client.setUsername='Koneko'
+    await client.change_presence(game=discord.Game(name="Reporting for Duty!! Use '$commands'to see all my commands"))
 
 
 @client.event
