@@ -23,17 +23,19 @@ async def on_message(message):
 100,
 150,
 200,
-250
-etc,
-Till the 1000.
-If you are lucky you will get 5000 xp""", inline=True)
+250,
+300,
+350,
+400,
+450,
+500"", inline=True)
         emb.set_image(url='https://i.imgur.com/i8lO032.png')
         await client.send_message(message.channel, embed=emb)
 
     if message.content.lower().startswith('$profile'):
         await client.send_message(message.channel, "You have %s xp which makes you level %s %s"%(get_xp(message.author.id), get_level(message.author.id), message.author.mention))
 
-    user_add_xp(message.author.id, random.choice ([100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 5000]))
+    user_add_xp(message.author.id, random.choice ([100, 150, 200, 250, 300, 350, 400, 450, 500]))
 
     if get_xp(message.author.id) >= 100 and get_level(message.author.id) ==0:
         add_level(message.author.id)
